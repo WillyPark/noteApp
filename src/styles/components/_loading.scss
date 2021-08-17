@@ -1,0 +1,33 @@
+.loading__screen{
+    align-items: center;
+    background-image: linear-gradient(240deg, $primary 0%, lighten($primary, 20) 100%);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+
+    .spinner{
+        animation: spin 1s linear infinite;
+        border: 6px solid rgba( 0, 0, 0, .2 );
+        border-left-color: $dark-grey;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+    }
+
+    p{
+        color: $dark-grey;
+        margin-top: 6px;
+        font-size: 22px;
+    }
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate( 0deg );
+    }
+    100%{
+        transform: rotate( 360deg );
+    }
+}
