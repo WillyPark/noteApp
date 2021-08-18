@@ -41,7 +41,7 @@ export const AppRouter = () => {
     }
 
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <div>
                 <Switch>
                     <PublicRoute isAuthenticated={ isLoggedIn } path="/auth" component={ AuthRouter } />
