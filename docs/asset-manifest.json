@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/noteApp/static/css/main.e0b57ad0.chunk.css",
-    "main.js": "/noteApp/static/js/main.b6d6df39.chunk.js",
-    "main.js.map": "/noteApp/static/js/main.b6d6df39.chunk.js.map",
+    "main.js": "/noteApp/static/js/main.642e794e.chunk.js",
+    "main.js.map": "/noteApp/static/js/main.642e794e.chunk.js.map",
     "runtime-main.js": "/noteApp/static/js/runtime-main.3dcfed57.js",
     "runtime-main.js.map": "/noteApp/static/js/runtime-main.3dcfed57.js.map",
     "static/js/2.0232ef78.chunk.js": "/noteApp/static/js/2.0232ef78.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.3dcfed57.js",
     "static/js/2.0232ef78.chunk.js",
     "static/css/main.e0b57ad0.chunk.css",
-    "static/js/main.b6d6df39.chunk.js"
+    "static/js/main.642e794e.chunk.js"
   ]
 }
