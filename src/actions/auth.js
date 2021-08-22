@@ -55,12 +55,13 @@ export const startGoogleLogin = () => {
                 dispatch(
                     login( user.uid, user.displayName )
                 )
+                
+                Toast.fire({
+                    icon: 'success',
+                    title: `¡Bienvenido ${user.displayName}!`
+                });
             });
 
-            Toast.fire({
-                icon: 'success',
-                title: `¡Bienvenido ${user.displayName}!`
-            });
         
     }
 }
