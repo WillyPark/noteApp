@@ -56,6 +56,12 @@ export const startGoogleLogin = () => {
                     login( user.uid, user.displayName )
                 )
             });
+
+            Toast.fire({
+                icon: 'success',
+                title: `¡Bienvenido ${user.displayName}!`
+            });
+        
     }
 }
 
