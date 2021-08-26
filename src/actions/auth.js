@@ -16,7 +16,8 @@ export const starLoginEmailPassword = ( email, password ) => {
 
                 Toast.fire({
                     icon: 'success',
-                    title: `¡Bienvenido ${user.displayName}!`
+                    title: `¡Bienvenido ${user.displayName}!`,
+                    timer: 1500
                 });
 
                 dispatch( finishLoading() );
@@ -58,7 +59,8 @@ export const startGoogleLogin = () => {
                 
                 Toast.fire({
                     icon: 'success',
-                    title: `¡Bienvenido ${user.displayName}!`
+                    title: `¡Bienvenido ${user.displayName}!`,
+                    timer: 1500
                 });
             });
 

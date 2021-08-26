@@ -33,7 +33,7 @@ export const NoteScreen = () => {
             <div className="notes__content">
                 <input 
                     type="text" 
-                    placeholder="Un increíble título" 
+                    placeholder="Escribe un título" 
                     className="notes__title-input"
                     autoComplete="off"
                     value={ title }
