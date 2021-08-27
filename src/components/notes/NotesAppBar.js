@@ -45,8 +45,8 @@ export const NotesAppBar = () => {
 
             <div className="notes__appbar__buttons">
                 <button className="btn btn-danger btn-custom" onClick={ handleDelete }>Borrar</button>
-                <button className="btn" onClick={ handlePictureClick }>Imagen</button>
-                <button className="btn me-3" onClick={ handleSave }>Guardar</button>
+                <button className="btn btn-subir-imagen" onClick={ handlePictureClick }>Imagen</button>
+                <button className="btn" onClick={ handleSave }>Guardar</button>
             </div>
         </div>
     )

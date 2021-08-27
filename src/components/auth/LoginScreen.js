@@ -59,7 +59,7 @@ export const LoginScreen = () => {
 
             <form className="animate__animated animate__fadeIn animate__faster" onSubmit={ handleLogin }>
                 <input 
-                    type="text" 
+                    type="email" 
                     placeholder="Correo" 
                     name="email" 
                     className="auth__input" 
