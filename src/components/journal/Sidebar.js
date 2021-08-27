@@ -1,13 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import { startLogout } from "../../actions/auth";
 import { startNewNote } from "../../actions/notes";
+import { esconderSidebar } from "../../helpers/esconderSidebar";
 import { JournalEntries } from "./JournalEntries";
 
 export const Sidebar = () => {
 
-    let contador = 0;
     const dispatch = useDispatch();
     const { name } = useSelector( state => state.auth );
+    const aside = document.querySelector("aside");
 
     const handleLogout = () => {
         dispatch( startLogout() );
@@ -15,29 +16,18 @@ export const Sidebar = () => {
 
     const handleAddNew = () => {
         dispatch( startNewNote() );
+
+        if ( window.matchMedia( "(max-width: 768px)").matches ) {
+            esconderSidebar();
+        }
     }
 
-
     const handleMobileButton = () => {
-        const aside = document.querySelector("aside");
-
-        if ( aside.classList.contains("fade") ) {
-            aside.classList.remove("animate__fadeInLeft");
-            aside.classList.add("animate__fadeOutLeft");
-
-            setTimeout(() => {
-                aside.classList.remove("fade");
-            }, 1000);
-
+        if ( aside.classList.contains("fade") ){
+            esconderSidebar();
         } else {
             aside.classList.add("fade");
             aside.classList.remove("animate__fadeOutLeft");
-            aside.classList.add("animate__fadeInLeft");
-
-        }
-        
-        if( contador === 0 ){
-            aside.classList.add("fade");
             aside.classList.add("animate__fadeInLeft");
         }
     }
@@ -56,7 +46,7 @@ export const Sidebar = () => {
 
                 <div className="journal__new-entry" onClick={ handleAddNew }>
                     <i className="far fa-sticky-note fa-5x"></i>
-                    <p className="mt-5">Nueva entrada</p>
+                    <p className="mt-5">Nueva Nota</p>
                 </div>
 
                 <JournalEntries />

@@ -3,6 +3,7 @@ import "moment/locale/es";
 import { useDispatch } from 'react-redux';
 import { activeNote } from '../../actions/notes';
 import { capitalizar } from '../../helpers/capitalizar';
+import { esconderSidebar } from '../../helpers/esconderSidebar';
 
 export const JournalEntry = ({ id, date, title, body, url }) => {
 
@@ -15,6 +16,10 @@ export const JournalEntry = ({ id, date, title, body, url }) => {
                 date, title, body, url
             }) 
         );
+
+        if ( window.matchMedia( "(max-width: 768px)").matches ) {
+            esconderSidebar();
+        }
     }
 
     return (

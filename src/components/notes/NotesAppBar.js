@@ -33,7 +33,7 @@ export const NotesAppBar = () => {
 
     return (
         <div className="notes__appbar">
-            <span>{ noteDate.format("DD") + " de " + capitalizar( noteDate.format("MMMM YYYY") ) }</span>
+            <span>{ noteDate.format("DD") + " " + capitalizar( noteDate.format("MMMM YYYY") ) }</span>
 
             <input
                 id="fileSelector"
@@ -43,10 +43,10 @@ export const NotesAppBar = () => {
                 onChange={ handleFileChange }
             />
 
-            <div>
+            <div className="notes__appbar__buttons">
                 <button className="btn btn-danger btn-custom" onClick={ handleDelete }>Borrar</button>
                 <button className="btn" onClick={ handlePictureClick }>Imagen</button>
-                <button className="btn" onClick={ handleSave }>Guardar</button>
+                <button className="btn me-3" onClick={ handleSave }>Guardar</button>
             </div>
         </div>
     )
