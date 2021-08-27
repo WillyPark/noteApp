@@ -72,7 +72,7 @@ export const RegisterScreen = () => {
                     value={ name }
                 />
                 <input 
-                    type="text" 
+                    type="email" 
                     placeholder="Correo" 
                     name="email" 
                     className="auth__input" 
